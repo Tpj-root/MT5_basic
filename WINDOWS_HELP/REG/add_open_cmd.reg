@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+; Right-click on empty space inside a folder
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere]
+@="Open in CMD"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; Right-click on a folder itself
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCmdHere]
+@="Open in CMD"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCmdHere\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; Right-click on a drive (C:, D: ...)
+[HKEY_CLASSES_ROOT\Drive\shell\OpenCmdHere]
+@="Open in CMD"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\OpenCmdHere\command]
+@="cmd.exe /s /k pushd \"%V\""
